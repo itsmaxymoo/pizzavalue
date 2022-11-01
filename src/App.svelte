@@ -1,10 +1,10 @@
 <script>
 
-    import PageView from "./PageView.svelte";
+    import MainView from "./MainView.svelte";
 
 </script>
 
-<PageView/>
+<MainView/>
 
 <style>
 

@@ -1,7 +1,7 @@
 <script>
+    import appName from "./const.js";
 
-import appName from "./const.js";
-
+    let title = appName;
 </script>
 
 <header>
@@ -9,16 +9,9 @@ import appName from "./const.js";
     <section class="hero is-warning">
         <div class="hero-body">
             <p class="title">
-                { appName }
+                { title }
             </p>
         </div>
     </section>
 
 </header>
-
-<main>
-</main>
-
-<style>
-
-</style>
