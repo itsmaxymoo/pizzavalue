@@ -1,11 +1,14 @@
 <script>
 
     import TopBar from "./TopBar.svelte";
-    import {Pizza} from "./pizza.js";
     import PizzaListView from "./PizzaListView.svelte";
     import AddPizzaCard from "./AddPizzaCard.svelte";
 
-    let pizzaList = [new Pizza(8, 16), new Pizza(8, 160), new Pizza(8, 1)];
+    let pizzaList = [];
+
+    function onAddPizza(event) {
+        pizzaList = [...pizzaList, event.detail.pizza];
+    }
 
 </script>
 
@@ -13,5 +16,5 @@
 
 <section class="section">
     <PizzaListView pizzaList="{pizzaList}"/>
-    <AddPizzaCard/>
+    <AddPizzaCard on:pizza={onAddPizza}/>
 </section>
