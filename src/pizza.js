@@ -48,4 +48,10 @@ export class Pizza {
             return 0;
         }
     }
+
+    // Function to determine if THIS object is equal to another
+    equals(that) {
+        return this.size === that.size
+            && this.price === that.price;
+    }
 }
