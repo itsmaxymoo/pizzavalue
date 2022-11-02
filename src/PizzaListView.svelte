@@ -12,20 +12,16 @@
     }
 </script>
 
-<section class="section">
+{#if pizzaList.length > 0}
 
-    {#if pizzaList.length > 0}
+    {#each pizzaList as pizza}
 
-        {#each pizzaList as pizza}
+        <PizzaCard pizza="{pizza}"/>
 
-            <PizzaCard pizza="{pizza}"/>
+    {/each}
 
-        {/each}
+{:else}
 
-    {:else}
+    <p class="has-text-centered has-text-grey-dark is-italic">Add some pizzas!</p>
 
-        <p class="has-text-centered has-text-grey-dark is-italic">Add some pizzas!</p>
-
-    {/if}
-
-</section>
+{/if}
