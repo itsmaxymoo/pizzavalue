@@ -14,7 +14,7 @@
 
 <TopBar/>
 
-<section class="section">
+<section class="section container">
     <PizzaListView pizzaList="{pizzaList}"/>
     <AddPizzaCard on:pizza={onAddPizza}/>
 </section>
