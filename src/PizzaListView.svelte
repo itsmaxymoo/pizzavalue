@@ -22,6 +22,6 @@
 
 {:else}
 
-    <p class="has-text-centered has-text-grey-dark is-italic">Add some pizzas!</p>
+    <p class="has-text-centered has-text-grey-dark is-italic mt-4 mb-6">Add some pizzas!</p>
 
 {/if}

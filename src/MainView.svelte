@@ -12,6 +12,6 @@
 <TopBar/>
 
 <section class="section">
-    <PizzaListView bind:pizzaList={pizzaList}/>
+    <PizzaListView pizzaList="{pizzaList}"/>
     <AddPizzaCard/>
 </section>
