@@ -10,16 +10,16 @@
         </span>
     </p>
 
-    <div class="field is-grouped-centered">
+    <div class="field has-text-centered">
         <div class="field-body">
 
             <div class="field has-addons">
-                <p class="control has-icons-right">
+                <p class="control has-icons-right is-expanded">
                     <input class="input" type="number" placeholder="size" min="0" required/>
                     <span class="icon is-right has-text-grey-dark">"</span>
                 </p>
 
-                <p class="control has-icons-left">
+                <p class="control has-icons-left is-expanded">
                     <span class="icon is-left has-text-grey-dark">$</span>
                     <input class="input" type="number" placeholder="price" min="0" required/>
                 </p>
