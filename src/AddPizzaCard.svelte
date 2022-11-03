@@ -1,7 +1,7 @@
 <script>
 
     import {Pizza} from "./pizza.js";
-    import { createEventDispatcher } from 'svelte';
+    import {createEventDispatcher} from 'svelte';
 
     const dispatch = createEventDispatcher();
 
@@ -15,6 +15,9 @@
 
     // For outside binding
     let newPizza = null;
+
+    // For autofocusing to first input on enter press
+    let firstInput;
 
     function addPizza() {
         np.size = parseFloat(np.size);
@@ -43,6 +46,16 @@
             dispatch('pizza', {
                 pizza: newPizza
             });
+
+            // Focus input
+            firstInput.scrollIntoView();
+            firstInput.focus();
+        }
+    }
+
+    function onEnterKey(key) {
+        if (key.keyCode === 13) {
+            addPizza();
         }
     }
 
@@ -66,6 +79,7 @@
                            placeholder="size"
                            min="0"
                            bind:value={np.size}
+                           bind:this={firstInput}
                            required/>
                     <span class="icon is-right has-text-grey-dark">"</span>
                 </p>
@@ -77,6 +91,7 @@
                            placeholder="price"
                            min="0"
                            bind:value={np.price}
+                           on:keypress={onEnterKey}
                            required/>
                 </p>
 
