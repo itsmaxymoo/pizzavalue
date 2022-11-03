@@ -5,7 +5,3 @@
 </script>
 
 <MainView/>
-
-<style>
-
-</style>
