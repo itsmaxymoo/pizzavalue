@@ -17,7 +17,7 @@ export class Pizza {
     }
 
     get unitPrice() {
-        return this.price / (Math.PI * Math.pow(this.size, 2));
+        return this.price / (Math.PI * Math.pow(this.size / 2, 2));
     }
 
     get prettyUnitPrice() {
