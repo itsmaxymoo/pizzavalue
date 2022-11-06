@@ -13,7 +13,16 @@
 </script>
 
 <button
-        class="button is-danger is-outlined"
+        class="delete is-large is-pulled-left"
         on:click={requestRemovePizza}>
     x
 </button>
+
+<style>
+
+    button{
+        position: absolute;
+        z-index: 1;
+    }
+
+</style>
