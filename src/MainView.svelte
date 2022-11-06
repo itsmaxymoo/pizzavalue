@@ -22,10 +22,14 @@
 </script>
 
 
-<TopBar/>
+<main class="is-unselectable">
 
-<section class="section container">
-    <PizzaListView pizzaList="{pizzaList}" on:removepizza={onDeleteOne}/>
-    <AddPizzaCard on:pizza={onAddPizza}/>
-    <RemoveAllPizzaButton on:click={onDeleteAll}/>
-</section>
+    <TopBar/>
+
+    <section class="section container">
+        <PizzaListView pizzaList="{pizzaList}" on:removepizza={onDeleteOne}/>
+        <AddPizzaCard on:pizza={onAddPizza}/>
+        <RemoveAllPizzaButton on:click={onDeleteAll}/>
+    </section>
+
+</main>
