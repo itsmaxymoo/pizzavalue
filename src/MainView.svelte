@@ -3,7 +3,7 @@
     import TopBar from "./TopBar.svelte";
     import PizzaListView from "./PizzaListView.svelte";
     import AddPizzaCard from "./AddPizzaCard.svelte";
-    import DeleteAllButton from "./RemoveAllButton.svelte";
+    import RemoveAllPizzaButton from "./RemoveAllPizzaButton.svelte";
 
     let pizzaList = [];
 
@@ -23,5 +23,5 @@
 <section class="section container">
     <PizzaListView pizzaList="{pizzaList}"/>
     <AddPizzaCard on:pizza={onAddPizza}/>
-    <DeleteAllButton on:click={onDeleteAll}/>
+    <RemoveAllPizzaButton on:click={onDeleteAll}/>
 </section>
