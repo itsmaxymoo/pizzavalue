@@ -16,7 +16,7 @@
 
     {#each pizzaList as pizza}
 
-        <PizzaCard pizza="{pizza}"/>
+        <PizzaCard pizza="{pizza}" on:removepizza/>
 
     {/each}
 

@@ -15,13 +15,17 @@
         pizzaList = [];
     }
 
+    function onDeleteOne(event) {
+        pizzaList = pizzaList.filter(pizza => !pizza.equals(event.detail.pizza));
+    }
+
 </script>
 
 
 <TopBar/>
 
 <section class="section container">
-    <PizzaListView pizzaList="{pizzaList}"/>
+    <PizzaListView pizzaList="{pizzaList}" on:removepizza={onDeleteOne}/>
     <AddPizzaCard on:pizza={onAddPizza}/>
     <RemoveAllPizzaButton on:click={onDeleteAll}/>
 </section>

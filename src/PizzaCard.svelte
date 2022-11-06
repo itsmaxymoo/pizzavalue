@@ -1,5 +1,6 @@
 <script>
     import {Pizza} from "./pizza.js";
+    import RemoveOnePizzaButton from "./RemoveOnePizzaButton.svelte";
 
     export let pizza = new Pizza(8, 20);
 </script>
@@ -13,6 +14,7 @@
             &#8211; {pizza.prettyPrice}
         </span>
 
+        <RemoveOnePizzaButton pizza="{pizza}" on:removepizza/>
     </p>
 
     <hr/>
