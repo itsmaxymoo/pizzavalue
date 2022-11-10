@@ -3,9 +3,10 @@
     import RemoveOnePizzaButton from "./RemoveOnePizzaButton.svelte";
 
     export let pizza = new Pizza(8, 20);
+    export let rank = 1;
 </script>
 
-<div class="box">
+<div class="box rank-overlay" style="--rank: {rank}">
 
     <RemoveOnePizzaButton pizza="{pizza}" on:removepizza/>
 
@@ -24,3 +25,9 @@
     </p>
 
 </div>
+
+<style>
+    .rank-overlay {
+        background-color: rgba(255, 200, 200, calc(1 - var(--rank)));
+    }
+</style>
