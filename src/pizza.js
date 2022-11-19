@@ -8,6 +8,11 @@ export class Pizza {
         this.size = size;
     }
 
+    // Factory method for creation from json
+    static fromJSON(json) {
+        return Object.assign(new Pizza(), json);
+    }
+
     get prettySize() {
         return this.size + "\"";
     }
