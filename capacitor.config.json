@@ -1,0 +1,6 @@
+{
+  "appId": "com.itsmaxymoo.pizzavalue",
+  "appName": "Pizza Value",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

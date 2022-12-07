@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Pizza Value</string>
+    <string name="title_activity_main">Pizza Value</string>
+    <string name="package_name">com.itsmaxymoo.pizzavalue</string>
+    <string name="custom_url_scheme">com.itsmaxymoo.pizzavalue</string>
+</resources>
