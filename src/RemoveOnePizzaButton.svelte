@@ -23,6 +23,7 @@
     button{
         position: absolute;
         z-index: 1;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
     }
 
 </style>
