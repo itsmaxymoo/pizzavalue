@@ -5,6 +5,7 @@
     import AddPizzaCard from "./AddPizzaCard.svelte";
     import RemoveAllPizzaButton from "./RemoveAllPizzaButton.svelte";
     import { pizzaList } from './store.js';
+    import Footer from "./Footer.svelte";
 
     function onAddPizza(event) {
         pizzaList.set([...$pizzaList, event.detail.pizza]);
@@ -30,5 +31,7 @@
         <AddPizzaCard on:pizza={onAddPizza}/>
         <RemoveAllPizzaButton on:click={onDeleteAll}/>
     </section>
+
+    <Footer/>
 
 </main>
