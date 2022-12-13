@@ -16,8 +16,9 @@
     // For outside binding
     let newPizza = null;
 
-    // For autofocusing to first input on enter press
+    // For autofocusing input on enter press
     let firstInput;
+    let secondInput;
 
     function addPizza() {
         np.size = parseFloat(np.size);
@@ -55,7 +56,12 @@
 
     function onEnterKey(key) {
         if (key.keyCode === 13) {
-            addPizza();
+            if(firstInput == document.activeElement){
+                secondInput.focus();
+            }
+            else{
+                addPizza();
+            }
         }
     }
 
@@ -80,6 +86,7 @@
                            min="0"
                            bind:value={np.size}
                            bind:this={firstInput}
+                           on:keypress={onEnterKey}
                            required/>
                     <span class="icon is-right has-text-grey-dark">"</span>
                 </p>
@@ -91,6 +98,7 @@
                            placeholder="price"
                            min="0"
                            bind:value={np.price}
+                           bind:this={secondInput}
                            on:keypress={onEnterKey}
                            required/>
                 </p>
