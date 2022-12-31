@@ -1,14 +1,14 @@
 import { writable } from "svelte/store";
-import { Pizza } from "./pizza";
+import { Pizza } from "./lib/pizza";
 
 
-const pizzaValueKey = "pizzaValue";
+const _pizzaListKey = "pizzaList";
 
 
 function _loadPizzaList() {
     try {
         // Try to load and parse pizzaList
-        let ls = localStorage.getItem(pizzaValueKey)
+        let ls = localStorage.getItem(_pizzaListKey)
         let parsed = JSON.parse(ls);
 
         // Throw parsing error if relevant - return empty array
@@ -29,5 +29,5 @@ function _loadPizzaList() {
 
 export const pizzaList = writable(_loadPizzaList());
 pizzaList.subscribe(value => {
-    localStorage.setItem(pizzaValueKey, JSON.stringify(value));
+    localStorage.setItem(_pizzaListKey, JSON.stringify(value));
 });

@@ -1,5 +1,5 @@
 <script>
-    import appName from "./const.js";
+    import appName from "./lib/const";
 
     let title = appName;
 </script>
