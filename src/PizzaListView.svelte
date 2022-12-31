@@ -1,22 +1,20 @@
-<script>
+<script lang="ts">
     import PizzaCard from "./PizzaCard.svelte";
-    import {Pizza} from "./pizza.js";
-
-    // This value should be bound by the parent for ease of updating
-    export let pizzaList = [];
+    import {Pizza} from "./lib/pizza.js";
+    import { pizzaList } from './store.js';
 
     // Sort pizzaList on update
     $: {
-        pizzaList;
-        pizzaList.sort(Pizza.compare);
+        $pizzaList;
+        pizzaList.set($pizzaList.sort(Pizza.compare));
     }
 </script>
 
-{#if pizzaList.length > 0}
+{#if $pizzaList.length > 0}
 
-    {#each pizzaList as pizza}
+    {#each $pizzaList as pizza}
 
-        <PizzaCard pizza="{pizza}" on:removepizza/>
+        <PizzaCard pizza="{pizza}"/>
 
     {/each}
 

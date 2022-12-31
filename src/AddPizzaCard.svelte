@@ -1,20 +1,15 @@
-<script>
+<script lang="ts">
 
-    import {Pizza} from "./pizza.js";
-    import {createEventDispatcher} from 'svelte';
-
-    const dispatch = createEventDispatcher();
+    import {Pizza} from "./lib/pizza.js";
+    import { pizzaList } from "./store.js";
 
     // New pizza struct
     let np = {
-        size: '',
-        price: '',
+        size: null,
+        price: null,
         errorMissingSize: false,
         errorMissingPrice: false
     };
-
-    // For outside binding
-    let newPizza = null;
 
     // For autofocusing input on enter press
     let firstInput;
@@ -37,16 +32,14 @@
         // If neither values have errors
         if (!(np.errorMissingSize || np.errorMissingPrice)) {
             // Create pizza
-            newPizza = new Pizza(np.size, np.price);
+            let newPizza = new Pizza(np.size, np.price);
 
             // Reset fields
             np.size = '';
             np.price = '';
 
             // Dispatch event to parents
-            dispatch('pizza', {
-                pizza: newPizza
-            });
+            pizzaList.set([...$pizzaList, newPizza])
 
             // Focus input
             firstInput.scrollIntoView();

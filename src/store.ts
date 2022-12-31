@@ -9,10 +9,11 @@ function _loadPizzaList() {
     try {
         // Try to load and parse pizzaList
         let ls = localStorage.getItem(_pizzaListKey)
-        let parsed = JSON.parse(ls);
+        if(ls == null) throw new TypeError();
+        let parsed: string = JSON.parse(ls);
 
         // Throw parsing error if relevant - return empty array
-        if (!parsed || !Array.isArray(parsed)) throw new TypeError;
+        if (!parsed || !Array.isArray(parsed)) throw new TypeError();
 
         // Convert regular json array to array of pizzas
         for (let i = 0; i < parsed.length; i++) {

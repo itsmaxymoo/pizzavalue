@@ -1,20 +1,16 @@
-<script>
-    import {createEventDispatcher} from 'svelte';
-
-    const dispatch = createEventDispatcher();
+<script lang="ts">
+    import { pizzaList } from './store';
 
     export let pizza = null;
 
-    function requestRemovePizza() {
-        dispatch('removepizza', {
-            pizza: pizza
-        });
+    function removePizza() {
+        pizzaList.set($pizzaList.filter(p => !p.equals(pizza)));
     }
 </script>
 
 <button
         class="delete is-large is-pulled-left"
-        on:click={requestRemovePizza}>
+        on:click={removePizza}>
     x
 </button>
 
