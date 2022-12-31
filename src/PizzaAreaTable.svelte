@@ -13,14 +13,14 @@
 
 <div class="box p-1 m-1 mt-2">
 	<div class="columns is-mobile is-gapless mb-0">
-		<div class="column is-1"></div>
+		<div class="column is-2"></div>
 		
-		<div class="column is-10">
+		<div class="column is-8">
 			<p class="has-text-centered pt-1">
 				<span class="is-size-4 has-text-weight-light" class:is-underlined={expanded}>{thisPizza.surfaceArea.toFixed(0)} in²</span>
 			</p>
 		</div>
-		<div class="column is-1 has-text-right">
+		<div class="column is-2 has-text-right">
 			{#if pizzas.length > 1}
 				<button class="button is-warning" on:click={accordion}>
 					<span>{#if !expanded}↓{:else}↑{/if}</span>
@@ -44,7 +44,7 @@
 								<tr>
 									<td>
 										<span class="has-text-weight-semibold">
-											{(thisPizza.surfaceArea / pizza.surfaceArea).toFixed(1)}x
+											{(thisPizza.surfaceArea / pizza.surfaceArea).toFixed(2)}x
 										</span>
 										${pizza.price}, {pizza.size}" pizza
 									</td>
