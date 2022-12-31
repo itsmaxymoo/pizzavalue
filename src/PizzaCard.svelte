@@ -17,10 +17,14 @@
         </span>
     </p>
 
-    <hr/>
+    <hr class="mt-2 mb-2"/>
 
     <p class="has-text-centered">
         <span class="is-size-3">{pizza.areaPerMoney.toFixed(2)} in² per dollar</span>
+    </p>
+
+    <p class="has-text-centered pt-1">
+        <span class="is-size-4 has-text-weight-light">{pizza.surfaceArea.toFixed(2)} in²</span>
     </p>
 
 </div>
