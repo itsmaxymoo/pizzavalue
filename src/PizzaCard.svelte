@@ -24,7 +24,7 @@
     </p>
 
     <p class="has-text-centered pt-1">
-        <span class="is-size-4 has-text-weight-light">{pizza.surfaceArea.toFixed(2)} in²</span>
+        <span class="is-size-4 has-text-weight-light">{pizza.surfaceArea.toFixed(0)} in²</span>
     </p>
 
 </div>
