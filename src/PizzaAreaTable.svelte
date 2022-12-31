@@ -30,7 +30,7 @@
 	</div>
 
 	<div class="columns is-mobile is-centered is-gapless">
-		<column is-12 is-6-desktop>
+		<column is-12>
 			<div hidden={!expanded}>
 				<div class="table-container">
 					<table class="table is-centered is-striped">
@@ -57,3 +57,9 @@
 		</column>
 	</div>
 </div>
+
+<style>
+    button{
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+</style>
