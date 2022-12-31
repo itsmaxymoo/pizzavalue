@@ -10,9 +10,7 @@
 
 <button
         class="delete is-large is-pulled-left"
-        on:click={removePizza}>
-    x
-</button>
+        on:click={removePizza} />
 
 <style>
 
