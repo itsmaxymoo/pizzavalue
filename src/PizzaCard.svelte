@@ -1,6 +1,8 @@
 <script lang="ts">
     import {Pizza} from "./lib/pizza.js";
+    import PizzaAreaTable from "./PizzaAreaTable.svelte";
     import RemoveOnePizzaButton from "./RemoveOnePizzaButton.svelte";
+    import { pizzaList } from "./store.js";
 
     export let pizza = new Pizza(8, 20);
 </script>
@@ -23,8 +25,6 @@
         <span class="is-size-3">{pizza.areaPerMoney.toFixed(2)} in² per dollar</span>
     </p>
 
-    <p class="has-text-centered pt-1">
-        <span class="is-size-4 has-text-weight-light">{pizza.surfaceArea.toFixed(0)} in²</span>
-    </p>
+    <PizzaAreaTable thisPizza={pizza} pizzas={$pizzaList}/>
 
 </div>
